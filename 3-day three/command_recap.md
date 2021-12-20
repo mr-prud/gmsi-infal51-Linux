@@ -84,3 +84,13 @@ sort /etc/passwd
 cut -d':' -f 1 /etc/passwd # extrait la listes des utilisateurs du fichier passwd
 ```
 
+* `find`: Extrait des champs des lignes
+```shell
+find  /usr -type f  -iname "*.h"  # Recherche des fichiers finissant en ".h" à partir du dossier /usr
+```
+
+* `grep`: Recherche de motifs dans des fichiers textes
+```shell
+cat /etc/passwd| grep "/bin/bash" # Recherche des lignes contenant /bin/bash dans l'entrée std (qui est la sortie de la commande cat ici)
+```
+

@@ -56,15 +56,14 @@ ps -edf
 * `top`: Visu des ressources systemes
 * `htop`: comme top, mais avec plus de couleurs 🌈
 
-
-
 ## Gestion des packages 📦
 
 * `dpkg`: outil de gestion des fichiers packages deb
 ```shell
-# installation un le fichier ~/assets/tp1/cowsay.deb
-dpkg 
+# installation du fichier deb ~/assets/tp1/cowsay.deb
+dpkg ~/assets/tp1/cowsay.deb
 ```
+
 * `apt`: Outil de gestion depackage debian
 ```shell
 apt update # mise à jour des versions des packages installables depuis le repository distant
@@ -73,5 +72,17 @@ apt install <nom_du_package> # Installation du package
 apt remove <nom_du_package> # Suppression du package
 ```
 
+## Gestion des utilisateurs et groupes
 
 
+* `useradd/userdel`: Ajout/suppression d'utilisateur
+
+* `usermod`: Modification d'un utilisateur
+```shell
+sudo usermod -aG www-data player # Ajoute l'utilisateur player dans le groupe www-data
+```
+* `groupadd/groupdel`: Ajout/suppression de groupe
+* `newgrp`: Prise en charge d'un nouveau groupe pour un utilisateur dans la session courante
+```shell
+newgrp www-data # permet à la session utilisateur courante de pouvoir se logguer dans le groupe www-data sans redemarrer une nouvelle session
+```
